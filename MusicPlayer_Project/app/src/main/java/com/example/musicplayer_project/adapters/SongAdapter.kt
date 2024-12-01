@@ -30,6 +30,7 @@ class SongAdapter (private var songs:List<Song>): RecyclerView.Adapter<SongAdapt
         holder.title.text = song.title
         holder.artist.text = song.artist.fullName
         holder.duration.text = song.duration
+        
         holder.itemView.setOnClickListener{
             Toast.makeText(holder.itemView.context, "song select ${song.title}", Toast.LENGTH_SHORT).show()
         }
