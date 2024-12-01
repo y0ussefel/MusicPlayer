@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.musicplayer_project.R
 import com.example.musicplayer_project.data.Song
 
-class SongAdapter (private val songs:List<Song>): RecyclerView.Adapter<SongAdapter.SongViewHolder>(){
+class SongAdapter (private var songs:List<Song>): RecyclerView.Adapter<SongAdapter.SongViewHolder>(){
     class SongViewHolder(item:View):RecyclerView.ViewHolder(item){
         val title = item.findViewById<TextView>(R.id.songTitle)
         val artist = item.findViewById<TextView>(R.id.songArtist)
@@ -34,5 +34,6 @@ class SongAdapter (private val songs:List<Song>): RecyclerView.Adapter<SongAdapt
             Toast.makeText(holder.itemView.context, "song select ${song.title}", Toast.LENGTH_SHORT).show()
         }
     }
+
 
 }
