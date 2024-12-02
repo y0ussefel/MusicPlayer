@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#D6C0C0"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical">
 
@@ -15,28 +16,34 @@
 
         <ImageView
             android:layout_width="40dp"
-            android:layout_height="40dp" />
+            android:layout_height="40dp"
+            android:src="@drawable/arrow"
+            />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="song playing"
+            android:textSize="25dp"
+            android:textColor="@color/white"
             android:layout_gravity="center" />
 
         <ImageView
             android:layout_width="40dp"
             android:layout_height="40dp"
+            android:src="@drawable/menu"
             android:layout_gravity="end" />
 
 
     </androidx.appcompat.widget.Toolbar>
 
-    <ImageView
-        android:layout_width="350dp"
-        android:layout_height="350dp"
-        android:background="@drawable/image_player"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="10dp" />
+        <ImageView
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/circle_background_white"
+            android:src="@drawable/cover" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -102,7 +109,7 @@
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:background="@drawable/lyrics_btn"
-                android:src="@drawable/fav" />
+                android:src="@drawable/music_icon" />
 
             <!-- Spacer to push the buttons apart -->
             <View
@@ -132,12 +139,12 @@
             <!-- Shuffle Button -->
             <ImageButton
                 android:id="@+id/shuffleButton"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
+                android:layout_width="38dp"
+                android:layout_height="53dp"
                 android:layout_margin="8dp"
                 android:background="@drawable/circle_background"
                 android:contentDescription="Shuffle"
-                android:src="@drawable/ic_repeat"
+                android:src="@drawable/repeat"
                 app:tint="@color/white" />
 
             <!-- Previous Button -->
@@ -152,6 +159,9 @@
                 app:tint="@color/white" />
 
             <!-- Play/Pause Button -->
+
+            <!-- Next Button -->
+
             <ImageButton
                 android:id="@+id/playPauseButton"
                 android:layout_width="64dp"
@@ -160,9 +170,8 @@
                 android:background="@drawable/circle_background_white"
                 android:contentDescription="Play/Pause"
                 android:src="@drawable/play"
-                app:tint="@color/black" />
+                 />
 
-            <!-- Next Button -->
             <ImageButton
                 android:id="@+id/nextButton"
                 android:layout_width="48dp"
@@ -181,7 +190,8 @@
                 android:layout_margin="8dp"
                 android:background="@drawable/circle_background"
                 android:contentDescription="Repeat"
-                android:src="@drawable/ic_repeat"
+                android:src="@drawable/shuffle"
+
                 app:tint="@color/white" />
 
         </LinearLayout>
